@@ -149,7 +149,6 @@ h1, h2, h3, h4, h5, h6 {
   border-top: 1px solid #ced4da !important; }
 
 .site-footer {
-  padding-top: 17rem;
   padding-bottom: 4rem;
   background: #333333; }
   .site-footer p {
@@ -202,6 +201,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Navbar */
 .site-navbar-wrap {
+  
   position: relative;
   z-index: 99;
   width: 100%;
@@ -216,9 +216,20 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
 
 .site-navbar {
+  visibility: hidden;
   margin-bottom: 0px;
   width: 100%;
   padding: 15px 0; }
+  .site-navbar.shrink{
+    visibility: visible;
+    height: 68px;
+  }
+  .site-navbar.shrink .container {
+    height: 100%;
+  }
+  .site-navbar.shrink .container .row {
+    height: 100%;
+  }
   .site-navbar .site-logo {
     font-weight: 200;
     line-height: 0;
@@ -544,7 +555,7 @@ h1, h2, h3, h4, h5, h6 {
       .site-blocks-cover h1 {
         font-size: 4rem; } }
   .site-blocks-cover .sub-text {
-    font-size: 1.4rem;
+    font-size: 1.15rem;
     color: gray;
     font-weight: 300; }
     @media (max-width: 991.98px) {
