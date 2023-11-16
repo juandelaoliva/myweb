@@ -800,7 +800,14 @@ section {
 
 @media screen and (max-width: 480px) {
   .fn_cs_tabs .tab_header ul li a {
-    font-size: 19px;
+    font-size: 18px;
+  }
+
+  .fn_cs_tabs .tab_header ul li:first-child {
+    padding-left: 0;
+  }
+  .fn_cs_tabs .tab_header ul li:last-child {
+    padding-right: 0;
   }
 }
 
