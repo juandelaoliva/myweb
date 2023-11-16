@@ -568,7 +568,7 @@ section {
   left: 50%;
   margin-left: -100px;
 }
-.main_title h3 {
+.main_title h1 {
   margin: 0;
   padding: 0;
   font-size: 72px;
@@ -580,7 +580,7 @@ section {
   left: -5px;
   color: var(--main-color);
 }
-.main_title h3:after {
+.main_title h1:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -589,7 +589,7 @@ section {
   height: 10px;
   background-color: var(--main-color);
 }
-.main_title h3 {
+.main_title h1 {
   margin-bottom: 43px;
 }
 .main_title p {
@@ -1560,10 +1560,10 @@ section {
   transition: all 0.3s ease;
 }
 @media (max-width: 1400px) {
-  .main_title h3 {
+  .main_title h1 {
     font-size: 50px;
   }
-  .main_title h3:after {
+  .main_title h1:after {
     width: 150px;
     height: 6px;
   }
