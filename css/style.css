@@ -1247,7 +1247,7 @@ section {
   -webkit-transform: scale(0.75) translateY(-85%);
   transform: scale(0.75) translateY(-85%);
   color: var(--main-color);
-  background: #efefef;
+  background: #fff;
   z-index: 33;
   padding-right: 30px;
   margin-left: 10px;
