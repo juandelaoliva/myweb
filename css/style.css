@@ -619,7 +619,7 @@ section {
   padding: 7px 26px;
   line-height: 1.6;
   margin: 0 0 30px 30px;
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
 }
 .fn_cs_info_items span {
@@ -843,6 +843,14 @@ section {
 
 .fn_cs_tabs .tab_item#tab3 {
   text-align: center;
+}
+
+#tab2 {
+  text-align: center;
+}
+
+.skills_title {
+  margin: 30px 0;
 }
 
 .fn_cs_tabs .tab_item.active {
@@ -1080,6 +1088,9 @@ section {
 }
 .biography .fn_cs_info_items {
   margin-bottom: 90px;
+}
+.biography .fn_cs_info_items.no-margin {
+  margin-bottom: 0;
 }
 .biography .fn_cs_cv_btn {
   margin-bottom: 100px;
