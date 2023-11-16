@@ -22,7 +22,7 @@
     content="Juan de la Oliva - Professional Solutions Architect specializing in Drupal technology, based in Frankfurt. Expert in web development, digital strategy, and client communication." />
   <meta name="author" content="Juan de la Oliva" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Juan de la Oliva | Solutions Architect | Experienced Solutions Architect specializing in Drupal technology,
     digital strategy, and client communication based in Frankfurt</title>
@@ -256,7 +256,6 @@
             <div class="container"><span></span></div>
             <a href="#">
               <img src="images/svg/right-arrow.svg" alt="right arrow" class="fn__svg" />
-              <span class="fn__tooltip">Double click to scroll the screen to previous section</span>
             </a>
           </div>
           <!-- /Scroll to next section -->
@@ -297,9 +296,6 @@
                       <p><span>EU Citizen</span></p>
                     </li>
                     <li class="wow fadeInUp" data-wow-delay="0.25s">
-                      <p>Based in: <span>Frankfurt, DE</span></p>
-                    </li>
-                    <li class="wow fadeInUp" data-wow-delay="0.25s">
                       <a target="”_blank”" href="https://www.linkedin.com/in/juan-de-la-oliva-aguilar-6324961a2/">
                         <p>
                           LinkedIn:
@@ -310,13 +306,13 @@
                     <li class="wow fadeInUp" data-wow-delay="0.36s">
                       <p>
                         Spanish phone:
-                        <span><a href="tel:+34617916319">(+34) 617916319</a></span>
+                        <span class="nowrap"><a href="tel:+34617916319">(+34) 617916319</a></span>
                       </p>
                     </li>
                     <li class="wow fadeInUp" data-wow-delay="0.50s">
                       <p>
                         German phone:
-                        <span><a href="tel:‭+4915122260142‬">(+49) ‭151 22260142‬</a></span>
+                        <span class="nowrap"><a href="tel:‭+4915122260142‬">(+49) ‭151 22260142‬</a></span>
                       </p>
                     </li>
                     <li class="wow fadeInUp" data-wow-delay="0.55s">
@@ -339,7 +335,7 @@
             <!-- Download CV Button -->
             <div class="fn_cs_cv_btn">
               <div class="container">
-                <a target="”_blank”" href="docs/CV-Juan_de_la_Oliva.pdf">
+                <a target="_blank" href="docs/CV-Juan_de_la_Oliva.pdf">
                   <span class="icon">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
                       x="0px" y="0px" viewBox="0 0 449.306 449.306" style="enable-background:new 0 0 449.306 449.306;"
@@ -539,7 +535,7 @@
                         <p>
                           The Computer Engineering - Software Engineering
                           program at the University of Seville, recognized
-                          with the EUR-ACE® Quality Seal, offers a
+                          with the EUR-ACE<sup>®</sup> Quality Seal, offers a
                           comprehensive syllabus in software development,
                           maintenance, and evaluation. This program integrates
                           a thorough grounding in technical knowledge with an
@@ -707,7 +703,6 @@
             <div class="container"><span></span></div>
             <a href="#">
               <img src="images/svg/right-arrow.svg" alt="right arrow" class="fn__svg" />
-              <span class="fn__tooltip">Double click to scroll the screen to previous section</span>
             </a>
           </div>
           <!-- /Scroll to next section -->
@@ -765,7 +760,7 @@
                         </div>
                       </div>
                       <div class="item">
-                        <a id="send_message" href="javascript:void(0);" onclick="sendEmail()">Send Message</a>
+                        <div class="send" id="send_message" onclick="sendEmail()">Send Message</div>
                       </div>
                     </div>
                   </div>
@@ -818,11 +813,14 @@
                   <p>Do you like music?</p>
                   <h3>Take a look at this band... 😉<br><a
                       href="https://www.youtube.com/watch?v=oNsWQeIX2os&ab_channel=PerdidoGodot">Perdido Godot</a></h3>
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/oNsWQeIX2os?si=DwjUMwYiVry-3bF9"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen loading="lazy">
-                  </iframe>
+                  
+
+                  <div id="video-container" onclick="playVideo()">
+                    <a target="_blank" href="https://www.youtube.com/watch?v=oNsWQeIX2os&ab_channel=PerdidoGodot"><img id="video-thumbnail" src="/images/PerdidoGodot.webp" alt="El Perseguidor - Perdido Godot" style="cursor:pointer" />
+                    <div class="play-button"><img class="fn__svg" src="/images/svg/play-video.svg" alt="play button icon"></div>
+                  </a>
+                  </div>
+                  
 
 
                   <h4 class="chao">

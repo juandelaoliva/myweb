@@ -4,7 +4,7 @@
   --main-color: #52796f;
   --dark-contrast: #354f52;
   /* --main-color: #ffcc0d;98c1d9 */
-  --text-color-for-main-bg: #efefef;
+  --text-color-for-main-bg: #fff;
   --text-color-for-normal-text: #443f42;
 }
 
@@ -75,9 +75,6 @@ p {
   letter-spacing: 0;
 }
 
-a:focus {
-  outline: thin dotted;
-}
 
 @media (max-width: 1200px) {
   body {
@@ -227,7 +224,7 @@ a:focus {
   display: block;
   top: 0;
   background-color: var(--main-color);
-  color: #efefef;
+  color: var(--text-color-for-main-bg);
   z-index: 5;
   line-height: 40px;
   font-size: 16px;
@@ -365,8 +362,8 @@ a:focus {
 }
 
 .mobilemenu .social a {
-  border-color: #efefef;
-  color: #efefef;
+  border-color: var(--text-color-for-main-bg);
+  color: var(--text-color-for-main-bg);
 }
 
 .mobilemenu {
@@ -374,7 +371,7 @@ a:focus {
 }
 
 .mobilemenu .copyright {
-  color: #efefef;
+  color: var(--text-color-for-main-bg);
   border-top: 3px solid var(--dark-contrast);
   margin-top: 20px;
   padding-top: 20px;
@@ -515,35 +512,10 @@ section {
   top: 50%;
   margin-top: -20px;
   background-color: var(--main-color);
-  color: #efefef;
+  color: var(--text-color-for-main-bg);
   z-index: 5;
 }
 
-.fn__next_section a:hover .fn__tooltip {
-  transform: translateY(-50%);
-  opacity: 1;
-  visibility: visible;
-}
-
-.fn__next_section .fn__tooltip {
-  position: absolute;
-  right: 100%;
-  background-color: #fff;
-  border: 2px solid var(--text-color-for-normal-text);
-  padding: 14px 20px;
-  color: var(--text-color-for-normal-text);
-  display: block;
-  width: auto;
-  z-index: 5;
-  margin-right: 20px;
-  min-width: 240px;
-  top: 50%;
-  transform: translateY(0);
-  outline: 20px solid #fff;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-}
 
 .fn__next_section .container {
   position: relative;
@@ -619,6 +591,8 @@ section {
 .fn_cs_about_modern .left_part img {
   opacity: 0;
   min-width: 100%;
+  width: 100%;
+  height: auto;
 }
 
 .fn_cs_about_modern .border {
@@ -1054,7 +1028,7 @@ section {
 
 .fn_cs_boxed_list a,
 .fn_cs_boxed_list a:visited {
-  color: var(--main-color);
+  color: var(--dark-contrast);
   text-decoration: none;
 }
 
@@ -1192,7 +1166,7 @@ section {
 .fn_cs_progress_bar .item_in {
   width: 100%;
   position: relative;
-  background-color: #efefef;
+  background-color: var(--text-color-for-main-bg);
   overflow: hidden;
 }
 
@@ -1301,7 +1275,7 @@ section {
   cursor: pointer;
   display: block;
   background-color: var(--main-color);
-  color: #efefef;
+  color: var(--text-color-for-main-bg);
   z-index: 5;
   overflow: hidden;
   margin-right: 10px;
@@ -1473,7 +1447,7 @@ section {
   width: 50%;
 }
 
-.thm_fn_contact .contact_form a {
+.thm_fn_contact .contact_form .send {
   display: block;
   line-height: 26px;
   white-space: nowrap;
@@ -1490,14 +1464,10 @@ section {
   border: 2px solid var(--main-color);
 }
 
-.thm_fn_contact .contact_form a:hover {
+.thm_fn_contact .contact_form .send:hover {
   border-color: var(--main-color);
   color: var(--main-color);
   background-color: transparent;
-}
-
-.thm_fn_contact .contact_form a:focus {
-  outline: 1px dashed #444;
 }
 
 .empty_notice {
@@ -1612,7 +1582,7 @@ section {
 
 .thm_fn_mobilemenu_wrap .vert_menu_list a {
   text-decoration: none;
-  color: #efefef;
+  color: var(--text-color-for-main-bg);
   font-size: 18px;
   line-height: 27px;
   text-transform: uppercase;
@@ -1621,7 +1591,7 @@ section {
 }
 
 .thm_fn_mobilemenu_wrap .vert_menu_list a:hover {
-  color: #efefef;
+  color: var(--text-color-for-main-bg);
 }
 
 .thm_fn_mobilemenu_wrap .vert_menu_list ul a {
@@ -1787,7 +1757,7 @@ section {
 .hamburger .hamburger-inner,
 .hamburger .hamburger-inner::after,
 .hamburger .hamburger-inner::before {
-  background-color: #efefef;
+  background-color: var(--text-color-for-main-bg);
   width: 30px;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -1893,6 +1863,7 @@ section {
 
   .fn_cs_about_modern .right_part {
     width: 100%;
+    text-align: center;
   }
 
   .fn_cs_boxed_list.modern li:nth-of-type(2n + 1) {
@@ -1918,6 +1889,11 @@ section {
   .fn_cs_boxed_list .item {
     padding: 32px 30px 33px;
   }
+
+  .main_title h1:after {
+    left: 50%;
+    margin-left: -75px;
+  } 
 }
 
 @media (max-width: 480px) {
@@ -1931,7 +1907,8 @@ section {
 }
 
 .signature {
-  max-width: 180px;
+  width: 180px;
+  height: auto;
   margin-top: -20px;
   margin: -30px 50px 0 auto;
   padding-left: 30px;
@@ -2006,4 +1983,45 @@ section {
 
 .chao {
   margin-top: 50px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+#video-container {
+  position: relative;
+  width: 100%; /* Responsive width */
+  max-width: 560px; /* Maximum width of the video */
+  margin: 0 auto; /* Center the video */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Adds shadow for some depth */
+  cursor: pointer; /* Change cursor to indicate clickable */
+  overflow: hidden; /* Ensures nothing overflows */
+}
+
+#video-thumbnail {
+  width: 100%; /* Responsive width */
+  display: block; /* Remove any extra space below the image */
+  transition: opacity 0.3s ease; /* Smooth transition for when image is clicked */
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ff0000;
+  width: 64px; /* Size of the play button */
+  height: 64px; /* Size of the play button */
+  pointer-events: none; /* Prevents the play button from blocking clicks on mobile */
+}
+
+.play-button .fn__svg {
+  width: 100%;
+  height: auto;
+}
+
+/* Hover state for desktop users */
+#video-container:hover #video-thumbnail {
+  opacity: 0.9; /* Slight dim on hover to indicate interactivity */
 }

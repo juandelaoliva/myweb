@@ -52,6 +52,7 @@
                 }
             });
         },
+
         colorScheme: function() {
             var n = e(".thm_fn_color_scheme")
               , o = n.find(".item")
