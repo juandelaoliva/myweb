@@ -12,6 +12,7 @@ html {
   overflow-x: hidden;
   padding: 0;
   margin: 0;
+  background-color: var(--main-color);
 }
 
 body {
@@ -20,6 +21,7 @@ body {
   line-height: 1.37;
   letter-spacing: 0;
   font-weight: 400;
+  background-color: #fff;
   color: var(--text-color-for-normal-text);
   word-break: break-word;
 }
@@ -434,6 +436,7 @@ a:focus {
   position: relative;
   transition: padding 0.5s ease;
   padding-left: 380px;
+  background-color: #fff;
 }
 
 .fn__link {
