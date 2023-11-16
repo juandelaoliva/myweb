@@ -995,7 +995,8 @@ section {
   list-style-type: circle;
 }
 .fn_cs_progress_bar {
-  margin-bottom: 34px;
+  margin: 35px 0;
+  text-align: left;
 }
 .fn_cs_progress_bar .progress_item {
   width: 100%;
