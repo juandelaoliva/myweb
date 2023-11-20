@@ -221,6 +221,7 @@ p {
   width: 40px;
   height: 40px;
   cursor: pointer;
+  border: none;
   display: block;
   top: 0;
   background-color: var(--main-color);
