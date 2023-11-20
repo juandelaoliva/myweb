@@ -1031,11 +1031,6 @@ section {
 .fn_cs_boxed_list a,
 .fn_cs_boxed_list a:visited {
   color: var(--dark-contrast);
-  text-decoration: none;
-}
-
-.fn_cs_boxed_list a:hover {
-  text-decoration: underline;
 }
 
 .fn_cs_boxed_list .item {
