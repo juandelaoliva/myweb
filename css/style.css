@@ -592,7 +592,7 @@ section {
   opacity: 0;
   min-width: 100%;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .fn_cs_about_modern .border {
@@ -1908,7 +1908,7 @@ section {
 
 .signature {
   width: 180px;
-  height: auto;
+  height: 150px;
   margin-top: -20px;
   margin: -30px 50px 0 auto;
   padding-left: 30px;
@@ -2018,7 +2018,7 @@ section {
 
 .play-button .fn__svg {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 /* Hover state for desktop users */
