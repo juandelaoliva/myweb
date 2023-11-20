@@ -1065,7 +1065,7 @@ section {
   margin-bottom: 6px;
 }
 
-.fn_cs_boxed_list .item_top h5 {
+.fn_cs_boxed_list .item_top h4 {
   margin: 0;
   padding: 0;
   font-size: 18px;
@@ -1226,23 +1226,23 @@ section {
   text-align: center;
 }
 
-.biography {
+.aboutme {
   padding: 171px 0 182px;
 }
 
-.biography .main_title {
+.aboutme .main_title {
   margin-bottom: 52px;
 }
 
-.biography .fn_cs_info_items {
+.aboutme .fn_cs_info_items {
   margin-bottom: 90px;
 }
 
-.biography .fn_cs_info_items.no-margin {
+.aboutme .fn_cs_info_items.no-margin {
   margin-bottom: 15px;
 }
 
-.biography .fn_cs_cv_btn {
+.aboutme .fn_cs_cv_btn {
   margin-bottom: 100px;
 }
 
@@ -1826,7 +1826,7 @@ section {
     padding: 65px 0 82px;
   }
 
-  .biography {
+  .aboutme {
     padding: 75px 0 82px;
   }
 
