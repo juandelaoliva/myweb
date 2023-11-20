@@ -373,7 +373,7 @@
         scrollToNextSection: function() {
             var t = 0
               , n = null;
-            e(".fn__next_section a").on("click", function() {
+            e(".fn__next_section button").on("click", function() {
                 var o = e(this).closest(".fn__next_section")
                   , a = 0;
                 return 1 === ++t ? (n = setTimeout(function() {
