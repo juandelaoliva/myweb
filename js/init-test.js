@@ -62,6 +62,12 @@
                 if (t.isTabClicked) return; // Check if tab click is in progress
         
                 var currentScrollPos = window.pageYOffset;
+        
+                // Check for negative scroll or scroll at top of the page
+                if (currentScrollPos <= 0) {
+                    return;
+                }
+        
                 if (prevScrollpos > currentScrollPos) {
                     logoHambElement.style.top = "0";
                 } else {
@@ -73,7 +79,7 @@
             logoHambElement.onclick = function() {
                 logoHambElement.style.top = "0";
             };
-        },             
+        },                  
         colorScheme: function() {
             var n = e(".thm_fn_color_scheme")
               , o = n.find(".item")
