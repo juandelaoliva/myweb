@@ -392,14 +392,18 @@
                     t.isTabClicked = true; // Set the flag
         
                     e('html, body').animate({
-                        scrollTop: tabContent.offset().top - 68
-                    }, 'slow', function() {
+                        scrollTop: tabContent.offset().top - 60
+                    }, 'slow');
+        
+                    // Extend the duration for which isTabClicked remains true
+                    setTimeout(function() {
                         t.isTabClicked = false; // Reset the flag
-                    });
+                    }, 2000); // Adjust this duration as needed
                 }
                 return false;
             })
-        },               
+        },
+                      
         about__parallax: function() {
             e("#scene").parallax()
         },
