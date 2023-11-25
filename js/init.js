@@ -2,6 +2,7 @@
     "use strict";
     var t = {
         root: e(":root"),
+        isTabClicked: false, // Added flag for tab click tracking
         init: function() {
             t.BgImg(),
             t.imgToSVG(),
@@ -21,7 +22,9 @@
             t.wow(),
             t.scrollToAnchor(),
             t.colorScheme(),
-            t.mobileMenuOpener()
+            t.mobileMenuOpener(),
+            t.logoHambScroll(),
+            t.darkLightSwitch()
         },
         mobileMenuOpener: function() {
             var hamburger = e(".thm_fn_mobilemenu_wrap .hamburger"),
@@ -52,7 +55,56 @@
                 }
             });
         },
+        darkLightSwitch: function() {
+            var lightModeBtn = e(".lightmode"),
+                darkModeBtn = e(".darkmode");
+        
+            lightModeBtn.on("click", function() {
+                e("body").removeClass("dark-mode");
+                // Update button states
+                darkModeBtn.removeClass("active");
+                lightModeBtn.addClass("active");
+            });
+        
+            darkModeBtn.on("click", function() {
+                e("body").addClass("dark-mode");
+                // Update button states
+                lightModeBtn.removeClass("active");
+                darkModeBtn.addClass("active");
+            });
+        },
+        logoHambScroll: function() {
+            var prevScrollpos = window.pageYOffset;
+            var logoHambElement = document.getElementById("logo_hamb");
+            var mobileMenu = e(".mobilemenu");
+        
+            window.onscroll = function() {
+                if (t.isTabClicked) return; // Check if tab click is in progress
+        
+                var currentScrollPos = window.pageYOffset;
+        
+                // Check for negative scroll or scroll at top of the page
+                if (currentScrollPos <= 0) {
+                    return;
+                }
 
+                // Prevent if the menu is open.
+                if (mobileMenu.hasClass('opened')) {
+                    return;
+                }
+        
+                if (prevScrollpos > currentScrollPos) {
+                    logoHambElement.style.top = "0";
+                } else {
+                    logoHambElement.style.top = "-50px";
+                }
+                prevScrollpos = currentScrollPos;
+            };
+        
+            logoHambElement.onclick = function() {
+                logoHambElement.style.top = "0";
+            };
+        },                  
         colorScheme: function() {
             var n = e(".thm_fn_color_scheme")
               , o = n.find(".item")
@@ -356,17 +408,33 @@
         },
         tabs: function() {
             e(".fn_cs_tabs .tab_header a").off().on("click", function() {
-                var n = e(this)
-                  , o = n.parent()
-                  , a = n.closest(".fn_cs_tabs");
-                return !o.hasClass("active") && (o.siblings().removeClass("active"),
-                a.find(".tab_content").children().removeClass("active"),
-                o.addClass("active"),
-                e(n.attr("href")).addClass("active"),
-                t.recallProgress(a),
-                !1)
+                var n = e(this),
+                    o = n.parent(),
+                    a = n.closest(".fn_cs_tabs"),
+                    tabContent = e(n.attr("href"));
+        
+                if (!o.hasClass("active")) {
+                    o.siblings().removeClass("active");
+                    a.find(".tab_content").children().removeClass("active");
+                    o.addClass("active");
+                    tabContent.addClass("active");
+                    t.recallProgress(a);
+        
+                    t.isTabClicked = true; // Set the flag
+        
+                    e('html, body').animate({
+                        scrollTop: tabContent.offset().top - 60
+                    }, 'slow');
+        
+                    // Extend the duration for which isTabClicked remains true
+                    setTimeout(function() {
+                        t.isTabClicked = false; // Reset the flag
+                    }, 2000); // Adjust this duration as needed
+                }
+                return false;
             })
         },
+                      
         about__parallax: function() {
             e("#scene").parallax()
         },
