@@ -5,11 +5,23 @@
   --dark-contrast: #354f52;
   /* --main-color: #ffcc0d;98c1d9 */
   --text-color-for-main-bg: #fff;
+  --main-bg: #fff;
   --text-color-for-normal-text: #443f42;
+  --youtube-red: #ff0000;
+  --box-background: #f2f2f2;
+}
+
+.dark-mode {
+  --main-color: #d0af5a;
+    --dark-contrast: #ad8b54;
+    --text-color-for-main-bg: #fff;
+    --main-bg: #354f52;
+    --text-color-for-normal-text: #fff;
+    --youtube-red: #ff0000;
+    --box-background: #52796f;
 }
 
 html {
-  overflow-x: hidden;
   padding: 0;
   margin: 0;
   background-color: var(--main-color);
@@ -21,7 +33,7 @@ body {
   line-height: 1.37;
   letter-spacing: 0;
   font-weight: 400;
-  background-color: #fff;
+  background-color: var(--main-bg);
   color: var(--text-color-for-normal-text);
   word-break: break-word;
 }
@@ -75,13 +87,6 @@ p {
   letter-spacing: 0;
 }
 
-
-@media (max-width: 1200px) {
-  body {
-    overflow-x: hidden;
-  }
-}
-
 @media (max-width: 1040px) {
   .container {
     padding: 0 20px;
@@ -114,7 +119,6 @@ p {
   clear: both;
   min-height: 100vh;
   position: relative;
-  overflow: hidden;
 }
 
 .thm_fn_wrapper_all:after {
@@ -172,7 +176,7 @@ p {
   left: 0;
   bottom: 0;
   z-index: 20;
-  background-color: #fff;
+  background-color: var(--main-bg);
   padding: 0;
   transition: transform 0.5s ease;
   display: flex;
@@ -434,7 +438,7 @@ p {
   position: relative;
   transition: padding 0.5s ease;
   padding-left: 380px;
-  background-color: #fff;
+  background-color: var(--main-bg);
 }
 
 .fn__link {
@@ -458,7 +462,7 @@ p {
   width: 100%;
   float: left;
   clear: both;
-  overflow: hidden;
+  overflow-x: clip;
   min-height: 100vh;
 }
 
@@ -493,7 +497,7 @@ section {
 
 .fn__next_section:after {
   width: 20px;
-  background-color: #fff;
+  background-color: var(--main-bg);
   right: 40px;
   content: "";
   top: 50%;
@@ -687,8 +691,8 @@ section {
 }
 
 .fn_cs_info_items li {
-  border: 4px solid var(--dark-contrast);
-  background-color: #f2f2f2;
+  border: 2px solid var(--dark-contrast);
+  background-color: var(--box-background);
   padding: 7px 26px;
   line-height: 1.6;
   margin: 0 0 30px 30px;
@@ -862,7 +866,11 @@ section {
 }
 
 .fn_cs_tabs .tab_header {
-  margin-bottom: 30px;
+  padding: 15px 0 10px;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background-color: var(--main-bg);
 }
 
 .fn_cs_tabs .tab_header ul {
@@ -1021,7 +1029,7 @@ section {
   width: 100%;
   float: left;
   clear: both;
-  margin-bottom: 20px;
+  margin-bottom: 6px;
 }
 
 .fn_cs_boxed_list li:last-child {
@@ -1033,11 +1041,16 @@ section {
   color: var(--dark-contrast);
 }
 
+.dark-mode .fn_cs_boxed_list a,
+.dark-mode .fn_cs_boxed_list a:visited {
+  color: var(--main-color);
+}
+
 .fn_cs_boxed_list .item {
   width: 100%;
   float: left;
   clear: both;
-  background-color: #f2f2f2;
+  background-color: var(--box-background);
   position: relative;
   padding: 52px 50px 53px;
 }
@@ -1062,7 +1075,7 @@ section {
 
 .fn_cs_boxed_list .item_top {
   display: flex;
-  margin-bottom: 6px;
+  margin-bottom: 15px;
 }
 
 .fn_cs_boxed_list .item_top h4 {
@@ -1412,7 +1425,7 @@ section {
   -webkit-transform: scale(0.75) translateY(-85%);
   transform: scale(0.75) translateY(-85%);
   color: var(--main-color);
-  background: #fff;
+  background: var(--main-bg);
   z-index: 33;
   padding-right: 30px;
   margin-left: 10px;
@@ -1547,6 +1560,7 @@ section {
   clear: both;
   padding: 20px 15px;
   background-color: var(--main-color);
+  transition: top 0.3s;
 }
 
 .thm_fn_mobilemenu_wrap .logo_hamb .in {
@@ -1911,6 +1925,10 @@ section {
   padding-left: 30px;
 }
 
+.dark-mode .signature {
+  filter: invert(1);
+}
+
 .desc .fn__svg {
   color: var(--main-color);
 }
@@ -2008,7 +2026,7 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #ff0000;
+  color: var(--youtube-red);
   width: 64px; /* Size of the play button */
   height: 64px; /* Size of the play button */
   pointer-events: none; /* Prevents the play button from blocking clicks on mobile */
@@ -2022,4 +2040,54 @@ section {
 /* Hover state for desktop users */
 #video-container:hover #video-thumbnail {
   opacity: 0.9; /* Slight dim on hover to indicate interactivity */
+}
+.dark-light-switcher {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  width: fit-content;
+  margin: auto;
+  border: 2px solid var(--dark-contrast);
+  padding: 1px;
+  border-radius: 9999px;
+}
+
+.dark-light-switcher button {
+  border: none;
+  background: none;
+  color: var(--dark-contrast);
+  border-radius: 50%;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.dark-mode .dark-light-switcher button {
+  color: var(--text-color-for-main-bg);
+}
+
+.dark-mode .dark-light-switcher button:hover,
+.dark-mode .dark-light-switcher button.active {
+  background-color: var(--dark-contrast);
+}
+
+.dark-light-switcher button:hover,
+.dark-light-switcher button.active {
+  background-color: var(--dark-contrast);
+  color: var(--text-color-for-main-bg);
+}
+
+.dark-light-switcher button svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.lightmode {
+  margin-right: 2px;
 }

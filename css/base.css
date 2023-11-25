@@ -135,7 +135,7 @@ p{
 textarea{
 	border-radius:1px;
 	font-size: 22px;
-	color: #000;
+	color: var(--text-color-for-main-bg);
 	resize: vertical;
 	font-family: 'Jost', Arial, Helvetica, sans-serif;
 	background-color: transparent;
@@ -148,7 +148,7 @@ textarea{
 	line-height: 1.5;
 	padding:16px 30px!important;
 	width:100%;
-	border: 2px solid #000;
+	border: 2px solid var(--dark-contrast);
 	
 	-webkit-transition: all .3s ease;
 	   -moz-transition: all .3s ease;
@@ -176,8 +176,8 @@ input[type="color"],
     display: block;
     border-radius: 1px;
     background-color: transparent;
-    border: 2px solid #000;
-    color: #000;
+    border: 2px solid var(--dark-contrast);
+    color: var(--text-color-for-main-bg);
     font-size: 22px;
     outline: none;
     padding: 0 30px !important;
