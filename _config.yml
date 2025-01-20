@@ -1,1 +1,6 @@
 theme: jekyll-theme-cayman
+
+title: "Juan de la Oliva's Blog"
+description: "Explore articles about Drupal, AI, technology, web development, and more, written by Juan de la Oliva."
+url: "https://juandelaoliva.com"
+permalink: /blog/:title/
