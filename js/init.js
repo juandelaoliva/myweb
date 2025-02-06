@@ -25,6 +25,10 @@
             t.mobileMenuOpener(),
             t.logoHambScroll(),
             t.darkLightSwitch()
+            
+            document.querySelectorAll('.year').forEach(function(el){
+                el.textContent = new Date().getFullYear();
+              });
         },
         mobileMenuOpener: function() {
             var hamburger = e(".thm_fn_mobilemenu_wrap .hamburger"),
