@@ -1124,7 +1124,7 @@ section {
   padding-left: 140px;
 }
 
-.fn_cs_boxed_list.experience .experience_list {
+.fn_cs_boxed_list.experience #experience-list ul {
   padding-left: 30px;
   list-style-type: circle;
 }

@@ -191,6 +191,13 @@
             <button aria-label="Activate dark mode" class="darkmode"><img src="images/svg/moon.svg" alt="github logo"
                 class="fn__svg" /></button>
           </div>
+          <div class="language-switcher">
+            <img src="images/svg/TablerWorld.svg" alt="language icon" />
+            <span class="lang-option" data-lang="en">EN</span> /
+            <span class="lang-option" data-lang="es">ES</span>
+          </div>
+          
+          
           <div class="copyright">
             <div class="social">
               <ul>
@@ -246,10 +253,10 @@
                       <div class="layer border" data-depth="0.2">
                         <span class="span1"></span>
                         <span class="span2"></span>
-                        <img src="images/thumb/450-550.jpg" alt="white square" />
+                        <img src="images/juandelaoliva-juan_de_la_oliva.webp" alt="Juan de la Oliva, Solutions Architect in Frankfurt." />
                       </div>
                       <div class="img_holder layer" data-depth="0.3">
-                        <img src="images/thumb/450-550.jpg" alt="Juan de la Oliva, Solutions Architect in Frankfurt." />
+                        <img src="images/juandelaoliva-juan_de_la_oliva.webp" alt="Juan de la Oliva, Solutions Architect in Frankfurt." />
                         <div class="abs_img" data-bg-img="images/juandelaoliva-juan_de_la_oliva.webp"></div>
                       </div>
                       <div class="dots layer" data-switch="disable" data-depth="0.4"></div>
@@ -259,14 +266,16 @@
                   <div class="right_part">
                     <!-- Main Title -->
                     <div class="main_title">
-                      <h1>Solutions Architect</h1>
-                      <h2>Juan de la Oliva</h2>
+                      <h1 id="page-title">Solutions Architect</h1>
+                      <div id="about-text">
+                        <h2>Juan de la Oliva</h2>
                       <p>
                         Solutions Architect focused on pre-sales, technical consulting, and scalable web architecture. I
                         help businesses translate goals into digital platforms that perform. From rapid prototyping to
                         delivery coordination, I bridge the gap between tech and business, working with clients like
                         Nestlé, Starbucks, Samsung and Nespresso across international markets.
                       </p>
+                      </div>
                       <img class="signature" src="images/signature.svg" alt="juans signature" />
                     </div>
                     <!-- /Main Title -->
@@ -292,7 +301,8 @@
             <!-- Main Title -->
             <div class="main_title center">
               <div class="container max880">
-                <h3>About me</h3>
+                <h3 id="about-me-title">About me</h3>
+                <div id="about-me-text">
                 <p>
                   I'm a Solutions Architect with a strong focus on pre-sales, technical consulting, and digital
                   architecture. Based in Frankfurt and originally from Seville, I've led strategic and technical
@@ -304,6 +314,7 @@
                   delivery.
                 </p>
               </div>
+              </div>
             </div>
             <!-- /Main Title -->
 
@@ -311,7 +322,7 @@
             <div class="fn_cs_info_items">
               <div class="container">
                 <div class="row">
-                  <ul>
+                  <ul id="about-items">
                     <li class="wow fadeInUp" data-wow-delay="0s">
                       <p>Name: <span>Juan de la Oliva</span></p>
                     </li>
@@ -386,7 +397,7 @@
                     </svg>
                   </span>
 
-                  <span>Download CV</span>
+                  <span id="download-cv-label">Download CV</span>
                 </a>
               </div>
             </div>
@@ -397,7 +408,7 @@
               <div class="container max880">
                 <div class="row">
                   <!-- Tab: Header -->
-                  <div class="tab_header">
+                  <div class="tab_header" id="tabs-container">
                     <ul>
                       <li class="active"><a aria-label="Open Experience tab" href="#tab1">Experience</a></li>
                       <li><a aria-label="Open Skills tab" href="#tab2">Skills</a></li>
@@ -412,7 +423,7 @@
                     <div id="tab1" class="tab_item active">
                       <!-- Boxed List -->
                       <div class="fn_cs_boxed_list experience">
-                        <ul>
+                        <ul id="experience-list">
                           <li>
                             <div class="item">
                               <h3>SOLUTIONS ARCHITECT</h3>
@@ -889,6 +900,8 @@
       <script type="text/javascript" src="js/ie8.js"></script>
     <![endif]-->
   <script type="text/javascript" src="js/init.js"></script>
+  <div id="about-text"></div>
+<script src="js/hygraph.js"></script>
   <!-- /Scripts -->
 </body>
 
